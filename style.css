@@ -417,7 +417,7 @@ input::placeholder {
     display: flex;
     margin: auto;
     width: 50%;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     justify-content: center;
 }
 
@@ -446,6 +446,7 @@ input::placeholder {
     grid-template-columns: 12.5% 30% 15% 30% 12.5%;
     grid-template-rows: fit-content fit-content;
     row-gap: 150px;
+    padding-bottom: 20px;
 }
 
 .resume-movie-dropdowns {
@@ -562,6 +563,33 @@ input::placeholder {
 
 #blog-container.live {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.blog-post {
+    background: rgb(231, 186, 82);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+
+    width: 80%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .3);
+}
+
+.blog-post-comment-container {
+    background: lightgray;
+    width: 98%;
+    height: fit-content;
+    padding: 10px;
+    margin: auto;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 2px solid darkgrey;
+
+
 }
 
 
