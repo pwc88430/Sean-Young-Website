@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
@@ -34,10 +35,10 @@
                         <li><a href="#" data-id="home" class="nav-button live">Home</a></li>
                         <li><a href="#" data-id="resume" class="nav-button">Resume</a></li>
                         <li><a href="#" data-id="biography" class="nav-button">Biography</a></li>
-                        <li><a href="#" data-id="photos" class="nav-button">Photos</a></li>
-                        <li><a href="#" data-id="posters" class="nav-button">Posters</a></li>
+                        <li><a href="#" data-id="media" class="nav-button">Media</a></li>
+
                         <li><a href="#" data-id="blog" class="nav-button">Blog</a></li>
-                        <li><a href="#" data-id="reels" class="nav-button">Reels</a></li>
+
                         <li><a href="#" data-id="contact" class="nav-button">Contact</a></li>
                         <li><a href="#" data-id="members" class="nav-button">Members</a></li>
                     </ul>
@@ -528,15 +529,14 @@
 
 
 
-        <div id="photos-container" class="content">
-            <h1>Photos</h1>
+        <div id="media-container" class="content">
+            <h1>Media</h1>
+            <div id="logged-out-restriction"></div>
         </div>
 
 
 
-        <div id="posters-container" class="content">
-            <h1>Posters</h1>
-        </div>
+
 
 
 
@@ -546,9 +546,7 @@
 
 
 
-        <div id="reels-container" class="content">
-            <h1>Reels</h1>
-        </div>
+
 
 
 
@@ -568,15 +566,18 @@
 
         <div id="members-container" class="content">
             <h1>Members</h1>
+
             <p><a
                     href="https://wilberclonts.auth.us-east-1.amazoncognito.com/login?client_id=4ce65t7dfp2m3g5dlr2lhigqbb&response_type=code&scope=aws.cognito.signin.user.admin&redirect_uri=https%3A%2F%2Fwilberclonts.com%2Flogged_in.html">Register
                     or Login</a></p>
+            <button id="login-button">Login</button>
         </div>
     </div>
     <div class="footer-container">
         <footer> <small>Copyright © 2023 Sean Mary Young . All Rights Reserved.</small></footer>
     </div>
     <script src="index.js"></script>
+    <script src="blog.js"></script>
 </body>
 
 </html>

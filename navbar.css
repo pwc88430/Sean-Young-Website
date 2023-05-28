@@ -1,0 +1,49 @@
+.navbar {
+    display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 100px;
+}
+
+.nav-container {
+    justify-content: space-around;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    row-gap: 20px;
+    transition: all .2s linear;
+}
+
+.nav-marker {
+    height: 2px;
+    width: 30px;
+    background: red;
+    transform: translateY(20px);
+    position: absolute;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: rgb(0, 0, 0);
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    position: relative;
+}
+
+.navbar ul a:hover::before,
+.navbar ul a:focus {
+    color: red;
+    opacity: 1;
+}
+
+.navbar ul a:focus::before {
+    opacity: 1;
+}

@@ -39,7 +39,6 @@ HTTPRequest.open("GET", 'https://www.googleapis.com/blogger/v3/blogs/' + blogId 
 HTTPRequest.responseType = 'json';
 HTTPRequest.send();
 
-
 HTTPRequest.onload = () => {
     if (HTTPRequest.readyState == 4 && HTTPRequest.status == 200) {
         const data = HTTPRequest.response;
@@ -74,29 +73,19 @@ HTTPRequest.onload = () => {
                         const newComment = document.createElement("div")
                         newComment.innerHTML = comment.author.displayName + " - " + comment.content;
                         commentContainer.appendChild(newComment);
-
                     })
-
                 } else {
                     console.log(`Error: ${commentRequest.status}`);
                 }
             };
             commentRequest.send();
-
             newBlogText.innerHTML = item.content;
-
             newBlogTitle.innerHTML = item.title;
             newBlogPost.classList.add("blog-post");
-
-
             newBlogPost.appendChild(newBlogTitle);
             newBlogPost.appendChild(newBlogText);
             newBlogPost.appendChild(commentContainer);
-
             blogContainerEl.appendChild(newBlogPost);
-
-
-
         })
 
 
@@ -221,8 +210,6 @@ resumeCheckboxEl.addEventListener("click", () => {
 
 
 
-
-
 function updateDropdowns() {
     if (checked) {
         movieContainerEls.forEach((container) => {
@@ -248,6 +235,54 @@ function updateDropdowns() {
         });
     };
 };
+
+///Code for handling login content
+
+let loggedIn = false;
+
+const loginButtonEl = document.getElementById("login-button");
+
+loginButtonEl.addEventListener("click", () => {
+
+    if (loggedIn) {
+        loggedIn = false
+        console.log(loggedIn)
+        loginButtonEl.innerHTML = "Login"
+        updateLoggedInContents()
+    }
+    else {
+        loggedIn = true
+        console.log(loggedIn)
+        loginButtonEl.innerHTML = "logout"
+        updateLoggedInContents()
+    }
+
+})
+
+function updateLoggedInContents() {
+
+    const mediaContainerEl = document.getElementById("media-container")
+
+    if (loggedIn) {
+
+        const loggedOutRestrictionEl = document.getElementById("logged-out-restriction")
+
+        mediaContainerEl.removeChild(loggedOutRestrictionEl)
+
+    }
+    else {
+        const loggedOutRestrictionEl = document.createElement("div")
+        loggedOutRestrictionEl.id = "logged-out-restriction";
+        mediaContainerEl.appendChild(loggedOutRestrictionEl)
+    }
+
+
+
+
+
+}
+
+
 
 
 
