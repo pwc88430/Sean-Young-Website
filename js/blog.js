@@ -10,10 +10,11 @@ HTTPRequest.send();
 HTTPRequest.onload = () => {
     if (HTTPRequest.readyState == 4 && HTTPRequest.status == 200) {
         const data = HTTPRequest.response;
-        console.log(data)
 
+        //creates each post
         data.items.forEach((post) => {
 
+            //creating elements for new blog post
             const blogContainerEl = document.getElementById("blog-container")
 
             const blogPost = document.createElement("div");
@@ -61,6 +62,8 @@ HTTPRequest.onload = () => {
 
             const postId = post.id;
 
+
+            //making a request to get all comments on this post
             const commentRequest = new XMLHttpRequest();
             commentRequest.open("GET", 'https://www.googleapis.com/blogger/v3/blogs/' + blogId + '/posts/' + postId + '/comments?key=' + APIKEY);
             commentRequest.responseType = 'json'
@@ -68,60 +71,78 @@ HTTPRequest.onload = () => {
 
             commentRequest.onload = function () {
 
-                const commentData = commentRequest.response
-                console.log(commentData)
 
+                const commentData = commentRequest.response
+                console.log(commentData.items)
+                const innerCommentContainer = document.createElement("div")
+
+
+                //if the request is good, fill the comment containers with comments
                 if (commentRequest.readyState == 4 && commentRequest.status == "200") {
+
 
                     const postCommentButton = document.createElement("a")
                     postCommentButton.id = "blog-post-comment-button"
                     postCommentButton.innerHTML = "Post Comment"
 
-                    commentData.items.forEach((comment) => {
 
-                        const newComment = document.createElement("div")
-                        newComment.id = "blog-post-comment"
+                    //ignores posts that contain no comments
+                    if (commentData.items != undefined) {
 
-                        const name = comment.author.displayName;
+                        commentData.items.forEach((comment) => {
 
-                        const commentContent = comment.content;
 
-                        console.log(name + " - " + commentContent)
 
-                        newComment.innerHTML = name + ' - ' + commentContent
+                            const newComment = document.createElement("div")
+                            newComment.id = "blog-post-comment"
 
+                            const name = comment.author.displayName;
+
+                            const commentContent = comment.content;
+
+
+
+                            newComment.innerHTML = name + ' - ' + commentContent
+
+                            innerCommentContainer.appendChild(newComment)
+                        })
+                        innerCommentContainer.appendChild(postCommentButton)
                         commentContainerEl.addEventListener("click", () => {
 
-                            if (commentContainerEl.contains(newComment)) {
-                                commentContainerEl.removeChild(newComment)
+                            if (commentContainerEl.contains(innerCommentContainer)) {
+                                commentContainerEl.removeChild(innerCommentContainer)
+                            }
+                            else {
+                                commentContainerEl.appendChild(innerCommentContainer)
+                            }
+                        })
+                        //for posts that do not contain any comments
+                    } else {
+                        const noCommentLabel = document.createElement("div")
+                        noCommentLabel.innerHTML = "no comments"
+                        commentContainerEl.addEventListener("click", () => {
+                            if (commentContainerEl.contains(noCommentLabel)) {
+                                commentContainerEl.removeChild(noCommentLabel)
                                 commentContainerEl.removeChild(postCommentButton)
                             }
                             else {
-                                commentContainerEl.appendChild(newComment)
+                                commentContainerEl.appendChild(noCommentLabel)
                                 commentContainerEl.appendChild(postCommentButton)
                             }
                         })
-                    })
-
-
-
+                    }
                 } else {
                     console.log(`Error: ${commentRequest.status}`)
                 }
             }
-
-
-
+            //adds the new blog post to the blog container
             blogContainerEl.appendChild(blogPost)
-
         })
 
     } else {
         console.log(`Error: ${HTTPRequest.status}`);
     }
-
 }
-
 // code to add event listener to photo container
 
 /*const photoContainerEl = document.querySelector(".photo-container");

@@ -83,6 +83,7 @@
 #blog-post-comment {
     font-size: 13px;
     margin: 5px;
+    max-width: 60%;
 }
 
 #blog-post-comment-button {
