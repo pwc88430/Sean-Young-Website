@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    height: 83vh;
+}
+
+.footer-container {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    height: 2vh;
+    position: fixed;
+    bottom: 0;
+    background: rgb(253, 196, 127);
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.content {
+    display: none;
+}
+
+.logo {
+    font-family: 'Sacramento', cursive;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    word-wrap: none;
+    min-width: max-content;
+}
+
+.logo:hover {
+    transform: scale(1.01);
+}
+
+
+#logged-out-restriction {
+    height: 150%;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+}
+
+#name {
+    margin-right: 30px;
+}

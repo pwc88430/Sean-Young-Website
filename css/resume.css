@@ -1,0 +1,67 @@
+#resume-container.live {
+    display: grid;
+    grid-template-columns: 12.5% 30% 15% 30% 12.5%;
+    grid-template-rows: fit-content fit-content;
+    row-gap: 150px;
+    padding-bottom: 20px;
+}
+
+.resume-movie-dropdowns {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+.resume-tv-dropdowns {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.resume-dropdown-container {
+    background: #f7f3e8;
+    width: 300px;
+    height: 30px;
+    padding-left: 12px;
+    padding-top: 4px;
+    border-radius: 5px;
+    font-size: 25px;
+    transition: all .2s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .3);
+    margin: 20px 30px;
+
+}
+
+.long-resume-lists-container {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    column-span: 3;
+}
+
+.resume-list-movie,
+.resume-list-tv {
+    display: none;
+    font-size: 15px;
+    margin-top: 40px;
+    text-align: left;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+.resume-dropdown-container:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.fa-play {
+    transform: rotate(180deg);
+    transition: all .2s linear;
+    position: relative;
+    left: 150px;
+    font-size: 20px;
+}
+
+.resume-controls {
+    display: flex;
+    padding: 20px;
+}

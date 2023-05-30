@@ -1,0 +1,72 @@
+.social-media-icons {
+    width: 200px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    transition: all .4s ease-in-out;
+    z-index: 1;
+}
+
+.social-media-icons i {
+    cursor: pointer;
+}
+
+.social-media-icons i:hover {
+    transform: scale(1.1);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.social-media-icons i:active {
+    cursor: pointer;
+    transform: scale(.9);
+}
+
+.imdb {
+    color: rgb(189, 149, 5);
+}
+
+.facebook {
+    color: rgb(0, 157, 255);
+}
+
+.youtube {
+    color: red;
+}
+
+.instagram {
+    color: orangered;
+}
+
+a::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+
+@media (max-width:1400px) {
+    .social-media-icons {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding: 15px;
+        position: absolute;
+        width: 25px;
+        align-items: center;
+        right: -33px;
+        top: 140px;
+        box-shadow: -2px 8px 8px rgba(0, 0, 0, 0.3);
+        transition-delay: all .3s linear;
+    }
+
+}

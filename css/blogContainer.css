@@ -1,0 +1,96 @@
+#blog-container.live {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.blog-post {
+    width: 65%;
+    height: fit-content;
+    margin: auto;
+    background: #f7f3e8;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgb(0, 0, 0, .3);
+    padding-bottom: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.blog-post p {
+    text-indent: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 22px;
+}
+
+.blog-post h1 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: cursive;
+    width: fit-content;
+    margin-right: 0;
+}
+
+.blog-post .divider {
+    width: 100%;
+    background: black;
+    height: 1px;
+    z-index: 1;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.blog-post .photo-container,
+.blog-post .comment-container {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.blog-post .photo-container:hover,
+.blog-post .comment-container:hover {
+    background: #f9eed0;
+    cursor: pointer;
+}
+
+.blog-post #post-signiture {
+    text-align: right;
+    padding-right: 60px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.blog-post #time-stamp {
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.blog-post .comment-container a {
+    background: rgb(168, 246, 168);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#blog-post-comment {
+    font-size: 13px;
+    margin: 5px;
+}
+
+#blog-post-comment-button {
+    background: rgb(208, 241, 159);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+}

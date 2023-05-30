@@ -1,0 +1,28 @@
+#home-container.live {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin: auto;
+    width: 65%;
+    background-color: bisque;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+#home-container.live p {
+    align-content: center;
+}
+
+.main-image {
+    display: block;
+    margin: auto;
+    width: 300px;
+    border: 3px solid gray;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    resize: none;
+}
+
+.text-container {
+    color: rgb(0, 0, 0);
+}

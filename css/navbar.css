@@ -47,3 +47,56 @@
 .navbar ul a:focus::before {
     opacity: 1;
 }
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width:1400px) {
+
+    .nav-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: all .4s ease-in-out;
+    }
+
+    .navbar {
+        display: flex;
+        display: space-around;
+    }
+}
+
+
+
+@media (max-width: 820px) {
+
+    .nav-links a {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        font-size: 50px;
+
+        color: grey;
+    }
+
+    .nav-marker {
+        display: none;
+    }
+
+    .menu-button:hover {
+        transform: scale(1.05);
+        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all .1s linear;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+
+}
