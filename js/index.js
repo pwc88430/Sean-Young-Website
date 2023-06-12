@@ -1,3 +1,5 @@
+
+
 const navBar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-button");
 const contentPages = document.querySelectorAll(".content");

@@ -17,10 +17,10 @@
     display: block;
     margin: auto;
     width: 300px;
+    height: 400px;
     border: 3px solid gray;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    resize: none;
 }
 
 .text-container {

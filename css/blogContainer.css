@@ -19,11 +19,14 @@
     margin-bottom: 20px;
 }
 
+#blog-post-body-text {
+    font-size: 30px;
+}
 
 .blog-post p {
     text-indent: 50px;
     font-family: 'Times New Roman', Times, serif;
-    line-height: 22px;
+    line-height: 22px
 }
 
 .blog-post h1 {
@@ -94,4 +97,19 @@
     position: absolute;
     right: 40px;
     bottom: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#blog-post-comment-button:hover {
+    background: rgb(174, 239, 76);
+}
+
+
+
+#blog-post-no-comment-label {
+
+    font-size: 15px;
+    margin: 5px;
+    font-weight: bold;
 }

@@ -538,7 +538,62 @@
 
 
         <div id="media-container" class="content">
-            <h1>Media</h1>
+            <div class="media-controls-container">
+                <h2>Controls</h2>
+                <div class="size-control-container"><label for="size">Size</label><input type="range" min="1" max="100"
+                        value="1" class="slider" id="mediaPictureSizeSlider"></div>
+                <div class="search-bar-option-container"><label for="searchBarOption">Show search bar</label><input
+                        type="checkbox" id="searchCheckBox"></div>
+                <div class="category-option-container"><label for="categoryOption">Show category options</label><input
+                        type="checkbox" checked id="categoryCheckBox"></div>
+            </div>
+            <div class="media-content-container">
+                <h1>Media Gallery</h1>
+                <div class="media-search-input">
+                    <input type="text">
+                    <div class="media-search-button">Search</div>
+                </div>
+                <div class="media-container-category-buttons">
+                    <div class="all-category">All</div>
+                    <div class="posters-category">Posters</div>
+                    <div class="photos-category">Photos</div>
+                    <div class="journal-entry-category">Journal Entries</div>
+                    <div class="videos-category">Videos</div>
+                </div>
+                <div class="media-photos-container">
+                    <img src="mediaContainerShrunkPhotos/mediaImage1.jpeg" alt="image1" id="image1" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage2.jpeg" alt="image2" id="image2" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage24.jpeg" alt="image24" id="image24" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage3.jpeg" alt="image3" id="image3" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage23.jpeg" alt="image23" id="image23" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage4.jpeg" alt="image4" id="image4" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage22.jpeg" alt="image22" id="image22" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage5.jpeg" alt="image5" id="image5" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage6.jpeg" alt="image6" id="image6" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage7.jpeg" alt="image7" id="image7" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage21.jpeg" alt="image21" id="image21" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage8.jpeg" alt="image8" id="image8" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage9.jpeg" alt="image9" id="image9" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage20.jpeg" alt="image20" id="image20" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage10.jpeg" alt="image10" id="image10" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage11.jpeg" alt="image11" id="image11" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage19.jpeg" alt="image19" id="image19" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage12.jpeg" alt="image12" id="image12" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage13.jpeg" alt="image13" id="image13" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage18.jpeg" alt="image18" id="image18" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage14.jpeg" alt="image14" id="image14" class="photo">
+                    <img src="mediaContainerShrunkPhotos/mediaImage15.jpeg" alt="image15" id="image15" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage16.jpeg" alt="image16" id="image16" class="poster">
+                    <img src="mediaContainerShrunkPhotos/mediaImage17.jpeg" alt="image17" id="image17" class="poster">
+
+
+
+
+
+
+
+                </div>
+            </div>
             <div id="logged-out-restriction"></div>
         </div>
 
@@ -563,11 +618,14 @@
             <p>I love hearing from all my wonderful fans! If you'd like to contact me, please fill out the form below!
                 You
                 can also email me directly at fans@maryseanyoung.com</p>
-            <form layout="vertical" action="mailto:wilber1285@gmail.com">
-                <input type="text" id="name" required placeholder="Enter your Name">
-                <input type="text" id="email" required placeholder="Enter a valid email address">
+            <form layout="vertical" action="https://formsubmit.co/941adc95d94da75e60e66547548265b0" method="POST"
+                autocomplete="off">
+                <input type="name" name="name" id="name" required placeholder="Enter your Name">
+                <input type="email" name="email" id="email" required placeholder="Enter a valid email address">
                 <textarea name="message" id="message-input" placeholder="Type your message here"></textarea>
-                <input type="submit" value="Send" class="submit-btn">
+                <input type="hidden" name="_next" value="https://wilberclonts.com/index.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="submit" class="submit-btn">
             </form>
         </div>
 
@@ -591,10 +649,11 @@
 
 
 
-    <script src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
     <script src="js/blog.js"></script>
     <script src="js/resumeDropdowns.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/media.js"></script>
 </body>
 
 </html>

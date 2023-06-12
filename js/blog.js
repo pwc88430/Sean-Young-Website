@@ -35,6 +35,7 @@ HTTPRequest.onload = () => {
 
             const postBodyEl = document.createElement("p")
             postBodyEl.innerHTML = post.content;
+            postBodyEl.id = "blog-post-body-text"
             blogPost.appendChild(postBodyEl);
 
             const postSigniture = document.createElement("div")
@@ -62,6 +63,7 @@ HTTPRequest.onload = () => {
 
             const postId = post.id;
 
+            console.log(post)
 
             //making a request to get all comments on this post
             const commentRequest = new XMLHttpRequest();
@@ -84,6 +86,8 @@ HTTPRequest.onload = () => {
                     const postCommentButton = document.createElement("a")
                     postCommentButton.id = "blog-post-comment-button"
                     postCommentButton.innerHTML = "Post Comment"
+                    postCommentButton.href = post.url;
+                    postCommentButton.target = "_blank"
 
 
                     //ignores posts that contain no comments
@@ -119,7 +123,8 @@ HTTPRequest.onload = () => {
                         //for posts that do not contain any comments
                     } else {
                         const noCommentLabel = document.createElement("div")
-                        noCommentLabel.innerHTML = "no comments"
+                        noCommentLabel.id = "blog-post-no-comment-label"
+                        noCommentLabel.innerHTML = "No comments"
                         commentContainerEl.addEventListener("click", () => {
                             if (commentContainerEl.contains(noCommentLabel)) {
                                 commentContainerEl.removeChild(noCommentLabel)

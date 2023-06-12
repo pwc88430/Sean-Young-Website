@@ -1,0 +1,45 @@
+{
+  "auth": {
+    "seanyoungwebsite4b033d4c": {
+      "customAuth": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_seanyoungwebsite4b033d4c_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "seanyoungwebsite4b033d4c"
+        }
+      ]
+    },
+    "AMPLIFY_auth_seanyoungwebsite4b033d4c_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "seanyoungwebsite4b033d4c"
+        }
+      ]
+    },
+    "AMPLIFY_auth_seanyoungwebsite4b033d4c_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "seanyoungwebsite4b033d4c"
+        }
+      ]
+    },
+    "AMPLIFY_auth_seanyoungwebsite4b033d4c_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "seanyoungwebsite4b033d4c"
+        }
+      ]
+    }
+  }
+}

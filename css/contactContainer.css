@@ -63,8 +63,8 @@ input::placeholder {
 
 .submit-btn {
     border-radius: 30px;
-    background-color: coral;
-    font-family: monospace;
+    background-color: white;
+
     letter-spacing: 4px;
     margin-top: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
