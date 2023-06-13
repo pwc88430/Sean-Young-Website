@@ -26,6 +26,15 @@ navBar.addEventListener("click", (event) => {
         const element = document.getElementById(id + "-container");
         element.classList.add("live");
 
+        if (id === 'media' && !loggedIn) {
+            document.body.style.overflow = "hidden";
+        }
+
+        if (!(id === 'media')) {
+            document.body.style.overflow = "auto";
+        }
+
+
         //updateNavMarker(id);
     }
 })

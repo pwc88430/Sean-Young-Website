@@ -27,12 +27,14 @@
 
 .media-content-container {
     background: rgb(232, 242, 245);
-    margin: 10px;
+    margin: auto;
     height: fit-content;
     width: 70%;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .3);
+    margin: 10px;
+    margin-bottom: 40px;
 }
 
 .media-search-input {
@@ -80,6 +82,10 @@
 
 .media-container-category-buttons div:focus {
     background: lightgreen;
+}
+
+.media-content-container h1 {
+    text-align: center;
 }
 
 .media-photos-container {
