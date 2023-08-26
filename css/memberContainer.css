@@ -1,5 +1,9 @@
 #members-container.live {
     display: flex;
+    align-items: center;
+    height: 70%;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #members-container button {
@@ -13,4 +17,63 @@
 
 #members-container button:hover {
     background-color: red;
+}
+
+.login-box {
+    width: 30%;
+    height: fit-content;
+    background: rgb(222, 243, 190);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .3);
+    margin-top: 130px;
+}
+
+.register-box {
+    width: 30%;
+    height: fit-content;
+    background: rgb(222, 243, 190);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .3);
+    margin-top: 30px;
+}
+
+.register-box input {
+    background: rgb(238, 247, 223);
+    font: white;
+    width: 97%;
+}
+
+
+.login-box input {
+    background: rgb(238, 247, 223);
+    font: white;
+    width: 97%;
+}
+
+#loginButton {
+    background: rgb(93, 238, 93);
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#loginButton:hover {
+    background: lightgreen;
+}
+
+#createAccountButton {
+    background: rgb(93, 238, 93);
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#createAccountButton:hover {
+    background: lightgreen;
 }

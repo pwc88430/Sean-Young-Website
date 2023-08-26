@@ -1,4 +1,4 @@
-
+import { Auth } from 'aws-amplify';
 
 const navBar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-button");
